@@ -1,7 +1,7 @@
 <script setup>
   import { ref, onMounted, onUnmounted } from 'vue'
   import Lenguaje from '@/components/lenguaje.vue'
-  import Responsive from '@/components/responsive.vue'
+  // import Responsive from '@/components/responsive.vue'
 
   const anio = ref(new Date().getFullYear())
   const showScrollTopButton = ref(false)
@@ -133,7 +133,7 @@
     <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-5 py-12 mx-auto md:items-start md:py-12 lg:items-start">
       <div class="text-center md:mx-0 md:text-left">
         <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
-          <img src="@/assets/img/logo-tolko.svg" width="128" height="128" alt="Logo tolko" />
+          <img src="@/assets/img/logo-tolko.svg" width="128" height="128" alt="Logo Tolko Group" />
         </a>
         <!-- Social Icons -->
         <div class="mt-4">
@@ -170,11 +170,11 @@
         <nav class="mb-10 list-none">
           <ul class="cuauhizo">
             <li class="mt-3">
-              <a c="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(1)"> ;;;{{ $t('footer.list1.item2') }}
+              <a class="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(1)"> {{ $t('footer.list1.item2') }}
               </a>
             </li>
             <li class="mt-3">
-              <a c="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(2)"> ;;;{{ $t('footer.list1.item3') }}
+              <a class="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(2)"> {{ $t('footer.list1.item3') }}
               </a>
             </li>
             <li class="mt-3">
@@ -222,7 +222,7 @@
               <a href="mailto:tolko360@tolkogroup.com" class="text-gray-500 cursor-pointer hover:text-gray-200">tolko360@tolkogroup.com</a>
             </li>
             <li class="mt-3">
-              <a c="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(4)"> ;;;{{ $t('footer.list3.item3') }}
+              <a class="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(4)"> {{ $t('footer.list3.item3') }}
               </a>
             </li>
             <li class="mt-3">
@@ -237,7 +237,7 @@
       <p class="text-sm text-white text-center">© {{ anio }} {{ $t('footer.copy') }}</p>
     </div>
   </footer>
-  <Responsive />
+  <!-- <Responsive /> -->
 </template>
 
 <style scoped>

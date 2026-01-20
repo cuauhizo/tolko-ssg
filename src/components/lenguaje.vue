@@ -2,7 +2,7 @@
   <div class="selectbox">
     <div class="select" id="select" @click="toggleOptions">
       <div class="contenido-select">
-        <img v-if="selectedImg" :src="selectedImg" alt="" />
+        <img v-if="selectedImg" :src="selectedImg" :alt="`${currentLanguageText}`"  />
       </div>
       <i class="fas fa-angle-down"></i>
     </div>
@@ -11,7 +11,7 @@
       <a href="#" class="opcion" v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`"
         @click.prevent="selectOption(locale)">
         <div class="contenido-opcion">
-          <img :src="getFlag(locale)" alt="" />
+          <img :src="getFlag(locale)" :alt="`${languageTexts[locale]}`" />
         </div>
       </a>
     </div>
@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, watch, computed  } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t, availableLocales, locale } = useI18n();
@@ -31,8 +31,18 @@ const flags = {
   en: '/lenguaje/united-states-of-america.png',
 };
 
+const languageTexts = {
+  es: 'Español',
+  en: 'Inglés',
+};
+
 const selectedImg = ref(flags[locale.value] || '');
 const optionsActive = ref(false);
+
+// Computed para el texto del idioma actual
+const currentLanguageText = computed(() => {
+  return languageTexts[idioma.value] || '';
+});
 
 const toggleOptions = () => {
   optionsActive.value = !optionsActive.value;

@@ -1,6 +1,7 @@
 export const messages = {
   en: {
     locale: 'en',
+    lenguaje: 'English',
     messages: {
       hello: 'Hello word {name}',
       content: 'We are using i18n package.',
@@ -149,6 +150,7 @@ export const messages = {
   },
   es: {
     locale: 'es',
+    lenguaje: 'Español',
     messages: {
       hello: 'Hola mundo {name}',
       content: 'Estamos usando el paquete i18n.',
@@ -290,7 +292,7 @@ export const messages = {
       },
       list3: {
         item1: 'Contacto',
-        item2: 'climon@tolkogroup.com',
+        item2: 'tolko360@tolkogroup.com',
         item3: 'Solicitar presupuesto',
       },
       copy: 'TOLKO GROUP. Todos los derechos reservados.',
