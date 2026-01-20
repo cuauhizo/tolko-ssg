@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply w-[90%] mx-auto overflow-hidden max-w-screen-xl;
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(145.19% 74.62% at 56.02% 43.56%, rgba(234, 0, 41, 0.64) 0%, rgba(24, 24, 24, 0.64) 100%);
+  }
+}
+
+@font-face {
+  font-family: 'Franie-Black';
+  src: url('./font/Fraine/Franie-Black.eot'); /* IE9+ Compat Modes */
+  src: url('./font/Fraine/Franie-Black?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./font/Fraine/Franie-Black.woff2') format('woff2'), /* Super modern browsers */ url('./font/Fraine/Franie-Black.woff') format('woff'),
+    /* Modern browsers */ url('./font/Fraine/Franie-Black.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Franie-ExtraBold';
+  src: url('./font/Fraine/Franie-ExtraBold.eot'); /* IE9+ Compat Modes */
+  src: url('./font/Fraine/Franie-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./font/Fraine/Franie-ExtraBold.woff2') format('woff2'), /* Super modern browsers */ url('./font/Fraine/Franie-ExtraBold.woff') format('woff'),
+    /* Modern browsers */ url('./font/Fraine/Franie-ExtraBold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Franie-Light';
+  src: url('./font/Fraine/Franie-Light.eot'); /* IE9+ Compat Modes */
+  src: url('./font/Fraine/Franie-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./font/Fraine/Franie-Light.woff2') format('woff2'), /* Super modern browsers */ url('./font/Fraine/Franie-Light.woff') format('woff'),
+    /* Modern browsers */ url('./font/Fraine/Franie-Light.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Franie-SemiBold';
+  src: url('./font/Fraine/Franie-SemiBold.eot'); /* IE9+ Compat Modes */
+  src: url('./font/Fraine/Franie-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./font/Fraine/Franie-SemiBold.woff2') format('woff2'), /* Super modern browsers */ url('./font/Fraine/Franie-SemiBold.woff') format('woff'),
+    /* Modern browsers */ url('./font/Fraine/Franie-SemiBold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Franie-SemiBoldItalic';
+  src: url('./font/Fraine/Franie-SemiBoldItalic.eot'); /* IE9+ Compat Modes */
+  src: url('./font/Fraine/Franie-SemiBoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./font/Fraine/Franie-SemiBoldItalic.woff2') format('woff2'),
+    /* Super modern browsers */ url('./font/Fraine/Franie-SemiBoldItalic.woff') format('woff'), /* Modern browsers */ url('./font/Fraine/Franie-SemiBoldItalic.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+body {
+  font-family: 'Franie-Black';
+  /* color: red !important; */
+}
+
+.texto-con-bordes,
+.texto-con-bordes-red {
+  -webkit-text-fill-color: transparent;
+  /* -webkit-text-stroke-width: 1px; */
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.texto-con-bordes-red {
+  -webkit-text-stroke-color: rgb(204, 0, 50);
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* body {
+    background-color: blue !important;
+  } */
+
+  .contenedor-video video {
+    object-fit: contain !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .contenedor-video video {
+    object-fit: contain !important;
+  }
+}
