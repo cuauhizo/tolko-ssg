@@ -63,6 +63,16 @@
   const mostrarModal = servicio => {
     modal.mostrar = true
     modal.servicio = servicio
+
+    // --- NUEVO: Medición de GTM ---
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'view_service_detail', // Nombre del evento
+        service_name: servicio.titulo, // Nombre del servicio pulsado
+        service_id: servicio.id        // ID del servicio
+      });
+    }
+
     setTimeout(() => {
       modal.animar = true
     }, 300)

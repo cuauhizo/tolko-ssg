@@ -28,6 +28,14 @@ const handleSubmit = async (formData) => {
     const url = `${import.meta.env.VITE_API_URL}/contact`;
     const { data } = await axios.post(url, formData);
 
+    // Enviar evento a GTM
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'form_submission',
+        form_name: 'contacto_tolko'
+      });
+    }
+
     exito.value = data.msg;
     reset('frmContacto');
 
