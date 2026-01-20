@@ -29,7 +29,7 @@ const props = defineProps({
         </div>
         <div
           class="relative border-t border-t-blue-gray-100 pr-10 pl-10 border-t-[#181818] p-4 font-sans text-base font-light leading-relaxed text-blue-gray-500 antialiased">
-          {{ servicio.descipcion }}
+          {{ servicio.descripcion }}
         </div>
         <div class="flex shrink-0 flex-wrap items-center justify-end p-4 text-blue-gray-500"></div>
       </div>

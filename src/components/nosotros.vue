@@ -10,47 +10,47 @@
     {
       id: 1,
       titulo: t('section1.list.list1.title'),
-      descipcion: t('section1.list.list1.description'),
+      descripcion: t('section1.list.list1.description'),
     },
     {
       id: 2,
       titulo: t('section1.list.list2.title'),
-      descipcion: t('section1.list.list2.description'),
+      descripcion: t('section1.list.list2.description'),
     },
     {
       id: 3,
       titulo: t('section1.list.list3.title'),
-      descipcion: t('section1.list.list3.description'),
+      descripcion: t('section1.list.list3.description'),
     },
     {
       id: 4,
       titulo: t('section1.list.list4.title'),
-      descipcion: t('section1.list.list4.description'),
+      descripcion: t('section1.list.list4.description'),
     },
     {
       id: 5,
       titulo: t('section1.list.list5.title'),
-      descipcion: t('section1.list.list5.description'),
+      descripcion: t('section1.list.list5.description'),
     },
     {
       id: 6,
       titulo: t('section1.list.list6.title'),
-      descipcion: t('section1.list.list6.description'),
+      descripcion: t('section1.list.list6.description'),
     },
     {
       id: 7,
       titulo: t('section1.list.list7.title'),
-      descipcion: t('section1.list.list7.description'),
+      descripcion: t('section1.list.list7.description'),
     },
     // {
     //   id: 8,
     //   titulo: t('section1.list.list8.title'),
-    //   descipcion: t('section1.list.list8.description'),
+    //   descripcion: t('section1.list.list8.description'),
     // },
     // {
     //   id: 9,
     //   titulo: t('section1.list.list9.title'),
-    //   descipcion: t('section1.list.list9.description'),
+    //   descripcion: t('section1.list.list9.description'),
     // },
   ])
 
@@ -77,7 +77,7 @@
   watch(idioma, nuevoIdioma => {
     servicios.forEach((servicio, index) => {
       servicios[index].titulo = t(`section1.list.list${index + 1}.title`)
-      servicios[index].descipcion = t(`section1.list.list${index + 1}.description`)
+      servicios[index].descripcion = t(`section1.list.list${index + 1}.description`)
     })
   })
 </script>

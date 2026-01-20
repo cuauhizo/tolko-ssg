@@ -71,7 +71,7 @@
     <div class="fixed z-30 w-full" :class="[{ 'bg-scrolled': isScrolled }]">
       <nav class="container h-30 flex items-center justify-between px-5 py-3 relative text-white">
         <a href="./" class="w-1/3 max-w-[60px]">
-          <img src="@/assets/img/logo-tolko.svg" alt="Logo Tolko Group" class="w-full" width="60" height="60" fetchpriority="high" loading="lazy" />
+          <img src="@/assets/img/logo-tolko.svg" alt="Logo Tolko Group" class="w-full" width="60" height="60" fetchpriority="high" />
         </a>
         <div class="flex items-center justify-end gap-2">
           <input type="checkbox" id="menu" class="peer hidden" />

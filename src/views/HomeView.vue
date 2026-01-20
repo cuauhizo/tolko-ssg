@@ -17,6 +17,7 @@
       lang: () => locale.value,
     },
     meta: [
+      { rel: 'canonical', href: 'https://www.tolkogroup.com/' },
       { name: 'description', content: computed(() => t('meta.description')) },
       { name: 'keywords', content: computed(() => t('meta.keywords')) },
       { property: 'og:title', content: computed(() => t('meta.title')) },
@@ -32,6 +33,36 @@
       { name: 'twitter:image', content: 'https://tolkogroup.com/logo-tolko.svg' },
       { name: 'twitter:url', content: 'https://tolkogroup.com/' },
     ],
+    script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Tolko Group",
+        "alternateName": "Tolko",
+        "url": "https://tolkogroup.com/",
+        "logo": "https://tolkogroup.com/logo-tolko.svg",
+        "description": t('meta.description'),
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+52-55-6726-0647",
+            "contactType": "customer service",
+            "email": "tolko360@tolkogroup.com",
+            "areaServed": "MX",
+            "availableLanguage": ["Spanish", "English"]
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/tolkogroup/",
+          "https://twitter.com/tolkogroup",
+          "https://www.instagram.com/grupo_tolko",
+          "https://www.linkedin.com/company/tolko/"
+        ]
+      })
+    }
+  ]
   })
 </script>
 
