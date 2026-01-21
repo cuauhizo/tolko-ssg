@@ -42,11 +42,25 @@
     if (checkbox) checkbox.checked = false
   }
 
-  const scrollToSection = index => {
+  const scrollToSection = (index, sectionName) => {
     if (typeof document === 'undefined') return
     const element = document.getElementById(`section${index}`)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
+    
+      // 1. Actualizar la URL con el hash (ej: /#about) sin recargar
+      if (sectionName) {
+        window.history.pushState(null, null, `#${sectionName}`)
+      }
+
+      // 2. Enviar evento manual a GTM para asegurar la medición
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'virtual_pageview',
+          page_path: window.location.pathname + window.location.hash,
+          section_title: sectionName
+        });
+      }
     }
   }
 
@@ -82,21 +96,21 @@
               <li>
                 <a
                   href="#about"
-                  @click.prevent="scrollToSection(1); cerrarMenu();">
+                  @click.prevent="scrollToSection(1, 'about'); cerrarMenu();">
                   {{ $t('menu.about_us') }}
                 </a>
               </li>
               <li>
                 <a
                   href="#services"
-                  @click.prevent="scrollToSection(2); cerrarMenu();">
+                  @click.prevent="scrollToSection(2, 'services'); cerrarMenu();">
                   {{ $t('menu.our_services') }}
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  @click.prevent="scrollToSection(3); cerrarMenu();">
+                  @click.prevent="scrollToSection(3, '#'); cerrarMenu();">
                   {{ $t('menu.join_our_team') }}
                 </a>
               </li>
@@ -104,7 +118,7 @@
                 <a
                   href="#contact"
                   :class="['py-2.5 px-2.5 rounded-[15px] hover:opacity-80 ', activeSection === 'section6' ? 'bg-tolko-red text-white' : 'bg-tolko-red text-white']"
-                  @click.prevent="scrollToSection(4); cerrarMenu();">
+                  @click.prevent="scrollToSection(4, 'contact'); cerrarMenu();">
                   {{ $t('menu.get_in_touch_with_us') }}
                 </a>
               </li>
@@ -170,11 +184,11 @@
         <nav class="mb-10 list-none">
           <ul class="cuauhizo">
             <li class="mt-3">
-              <a class="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(1)"> {{ $t('footer.list1.item2') }}
+              <a class="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(1, 'about')"> {{ $t('footer.list1.item2') }}
               </a>
             </li>
             <li class="mt-3">
-              <a class="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(2)"> {{ $t('footer.list1.item3') }}
+              <a class="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(2, 'services')"> {{ $t('footer.list1.item3') }}
               </a>
             </li>
             <li class="mt-3">
@@ -222,7 +236,7 @@
               <a href="mailto:tolko360@tolkogroup.com" class="text-gray-500 cursor-pointer hover:text-gray-200">tolko360@tolkogroup.com</a>
             </li>
             <li class="mt-3">
-              <a class="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(4)"> {{ $t('footer.list3.item3') }}
+              <a class="text-gray-500 cursor-pointer hover:text-gray-200" @click="scrollToSection(4, 'contact')"> {{ $t('footer.list3.item3') }}
               </a>
             </li>
             <li class="mt-3">
