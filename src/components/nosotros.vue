@@ -64,7 +64,7 @@
     modal.mostrar = true
     modal.servicio = servicio
 
-    // --- NUEVO: Medición de GTM ---
+    // --- Medición de GTM ---
     if (typeof window !== 'undefined' && window.dataLayer) {
       window.dataLayer.push({
         event: 'view_service_detail', // Nombre del evento

@@ -31,8 +31,9 @@ const handleSubmit = async (formData) => {
     // Enviar evento a GTM
     if (typeof window !== 'undefined' && window.dataLayer) {
       window.dataLayer.push({
-        event: 'form_submission',
-        form_name: 'contacto_tolko'
+        event: 'form_submission_success',
+        form_name: 'contacto_tolko',
+        form_id: 'frmContacto'
       });
     }
 

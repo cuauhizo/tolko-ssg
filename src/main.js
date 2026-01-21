@@ -35,9 +35,10 @@ export const createApp = ViteSSG(
         id: 'GTM-WQQ6SXMJ', // Reemplaza por tu ID de GTM
         defer: false,
         enabled: true,
-        debug: true, // Cambiar a false en producción
+        debug: false, // Cambiar a false en producción
         loadScript: true,
         vueRouter: router, // ESTO es lo que permite medir secciones automáticamente
+        trackOnNextTick: true,
       }))
       app.use(VueNumberFormat, { prefix: '$ ', decimal: '.', thousand: ',' })
       app.use(plugin, defaultConfig(formKitConfig))
