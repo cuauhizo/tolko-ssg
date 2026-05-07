@@ -15,6 +15,7 @@ dist-ssr
 programa
 public/video
 public/galeria
+.unlighthouse
 
 # Editor directories and files
 .vscode/*
