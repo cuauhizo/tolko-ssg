@@ -2,15 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/tolkogroup/public_html/
-
-    # 1. Asegurarnos de que cPanel usa Node.js para compilar aqui
     - export PATH=/opt/cpanel/ea-nodejs20/bin:$PATH
-
-    # 2. Instalar las dependencias de Vue/Vite
     - npm install
-
-    # 3. Compilar los archivos estáticos de vite-ssg
     - npm run build
-
-    # 4. Copiar los archivos resultantes a la carpeta pública
     - /bin/cp -r dist/* $DEPLOYPATH
