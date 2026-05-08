@@ -483,10 +483,10 @@
     "/assets/Franie-SemiBoldItalic-3B9TrUcA.ttf"
   ],
   "node_modules/@unhead/vue/dist/shared/vue.-sixQ7xP.mjs": [
-    "/assets/vue.-sixQ7xP-Bz1xjOuP.js"
+    "/assets/vue.-sixQ7xP-JdklhmSU.js"
   ],
   "node_modules/@unhead/vue/dist/shared/vue.ziyDaVMR.mjs": [
-    "/assets/vue.-sixQ7xP-Bz1xjOuP.js"
+    "/assets/vue.-sixQ7xP-JdklhmSU.js"
   ],
   "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
     "/assets/logo-tolko-BjT6W5Cb.svg",
@@ -627,203 +627,203 @@
     "/assets/Franie-SemiBoldItalic-3B9TrUcA.ttf"
   ],
   "node_modules/axios/index.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/adapters/adapters.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/adapters/fetch.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/adapters/xhr.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/axios.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/cancel/CancelToken.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/cancel/CanceledError.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/cancel/isCancel.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/core/Axios.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/core/AxiosError.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/core/AxiosHeaders.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/core/InterceptorManager.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/core/buildFullPath.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/core/dispatchRequest.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/core/mergeConfig.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/core/settle.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/core/transformData.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/defaults/index.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/defaults/transitional.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/env/data.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/AxiosURLSearchParams.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/HttpStatusCode.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/bind.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/buildURL.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/combineURLs.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/composeSignals.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/cookies.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/formDataToJSON.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/isAbsoluteURL.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/isAxiosError.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/isURLSameOrigin.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/null.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/parseHeaders.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/parseProtocol.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/progressEventReducer.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/resolveConfig.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/speedometer.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/spread.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/throttle.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/toFormData.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/toURLEncodedForm.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/trackStream.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/helpers/validator.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/platform/browser/classes/Blob.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/platform/browser/classes/FormData.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/platform/browser/classes/URLSearchParams.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/platform/browser/index.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/platform/common/utils.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/platform/index.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/axios/lib/utils.js": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "node_modules/hookable/dist/index.mjs": [
@@ -850,7 +850,7 @@
     "/assets/Franie-SemiBoldItalic-3B9TrUcA.ttf"
   ],
   "node_modules/unhead/dist/index.mjs": [
-    "/assets/vue.-sixQ7xP-Bz1xjOuP.js"
+    "/assets/vue.-sixQ7xP-JdklhmSU.js"
   ],
   "node_modules/vite-ssg/dist/index.mjs": [
     "/assets/logo-tolko-BjT6W5Cb.svg",
@@ -1198,7 +1198,7 @@
     "/assets/Franie-SemiBoldItalic-3B9TrUcA.ttf"
   ],
   "src/assets/img/icon-close-modal.svg": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "src/assets/img/logo-tolko.svg": [
@@ -1248,15 +1248,15 @@
     "/assets/Franie-SemiBoldItalic-3B9TrUcA.ttf"
   ],
   "src/components/contacto.vue": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "src/components/hero.vue": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "src/components/hero.vue?vue&type=style&index=0&scoped=424010f3&lang.css": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "src/components/lenguaje.vue": [
@@ -1306,23 +1306,23 @@
     "/assets/Franie-SemiBoldItalic-3B9TrUcA.ttf"
   ],
   "src/components/modal.vue": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "src/components/nosotros.vue": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "src/components/resultados.vue": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "src/components/resultados.vue?vue&type=style&index=0&scoped=9f121aec&lang.css": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "src/components/servicios.vue": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "src/lang/messages.js": [
@@ -1395,10 +1395,10 @@
     "/assets/Franie-SemiBoldItalic-3B9TrUcA.ttf"
   ],
   "src/views/HomeView.vue": [
-    "/assets/HomeView-BaB-4_kd.js",
+    "/assets/HomeView-BbrRWUai.js",
     "/assets/HomeView-ClSxAkoz.css"
   ],
   "src/views/NotFound.vue": [
-    "/assets/NotFound-B6zZz3Dl.js"
+    "/assets/NotFound-DQvEbcet.js"
   ]
 }
