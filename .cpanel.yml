@@ -2,7 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/tolkogroup/public_html/
-    - export PATH=/opt/cpanel/ea-nodejs20/bin:$PATH
-    - npm install
-    - npm run build
     - /bin/cp -r dist/* $DEPLOYPATH
