@@ -1,0 +1,18 @@
+---
+deployment:
+  tasks:
+    - echo "Estableciendo ruta de despliegue para tolko-ssg..."
+    - export DEPLOYPATH=/home/tolkogroup/public_html/
+
+    - echo "Instalando dependencias de Node.js..."
+    # Asegúrate de que cPanel tenga acceso a npm (a veces se requiere la ruta completa como /opt/cpanel/ea-nodejs20/bin/npm)
+    - npm install 
+
+    - echo "Compilando sitio estático (vite-ssg)..."
+    - npm run build
+
+    - echo "Copiando archivos generados a public_html..."
+    # Vite genera los archivos en la carpeta 'dist', copiamos su contenido
+    - /bin/cp -r dist/* $DEPLOYPATH
+
+    - echo "¡Despliegue de la página pública completado!"
