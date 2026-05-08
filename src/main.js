@@ -17,7 +17,7 @@ const i18n = createI18n({
   messages,
   legacy: false,
 })
-
+// comentario de prueba para ver si se actualiza el repositorio correctamente
 export const createApp = ViteSSG(
   App,
   {

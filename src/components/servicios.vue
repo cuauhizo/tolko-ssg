@@ -2,6 +2,7 @@
 
 <template>
   <section id="section2">
+    <!-- comentario de prueba para ver si se actualiza el repositorio correctamente -->
     <p class="container md:text-4xl pt-4 text-center max-w-5xl" data-aos="fade-up">
       {{ $t('section2.We_help_you_through') }}
       <br />
