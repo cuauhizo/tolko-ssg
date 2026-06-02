@@ -52,7 +52,6 @@
       if (error.response && error.response.data && error.response.data.msg) {
         errorMsg.value = error.response.data.msg
       } else {
-        // errorMsg.value = 'Error al enviar el formulario. Por favor intenta nuevamente.'
         errorMsg.value = t('section5.form.sendError')
       }
     } finally {
@@ -149,8 +148,8 @@
             </div>
 
             <div class="md:col-span-2">
-              <FormKit type="submit">
-                {{ $t('section5.form.send') }}
+              <FormKit type="submit" :disabled="cargando">
+                {{ cargando ? $t('section5.form.sending') : $t('section5.form.send') }}
               </FormKit>
             </div>
           </div>
