@@ -53,7 +53,7 @@ export const createApp = ViteSSG(
           defer: false, // Inyecta el script normalmente
           compatibility: false,
           vueRouter: router, // ¡MAGIA! Esto hace que GTM rastree cada vez que cambias de página sin recargar
-          debug: true, // Ponlo en 'false' cuando lo subas a producción
+          debug: false, // Ponlo en 'false' cuando lo subas a producción
         }),
       )
       app.use(VueNumberFormat, { prefix: '$ ', decimal: '.', thousand: ',' })
