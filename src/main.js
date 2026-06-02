@@ -1,6 +1,7 @@
 import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
 import router from './router'
+import { createGtm } from '@gtm-support/vue-gtm'
 import AOS from 'aos'
 import { createI18n } from 'vue-i18n'
 import { messages } from '@/lang/messages.js'
@@ -27,9 +28,18 @@ export const createApp = ViteSSG(
     // Instalar plugins de Vue como Vue Router
     app.use(router)
     app.use(i18n)
-    
+
     // Puedes mover la inicialización de AOS aquí, o en un componente de nivel superior como App.vue
     if (isClient) {
+      app.use(
+        createGtm({
+          id: import.meta.env.VITE_GTM_ID, // Reemplaza esto con el ID real de tu contenedor GTM
+          defer: false, // Inyecta el script normalmente
+          compatibility: false,
+          vueRouter: router, // ¡MAGIA! Esto hace que GTM rastree cada vez que cambias de página sin recargar
+          debug: true, // Ponlo en 'false' cuando lo subas a producción
+        }),
+      )
       app.use(VueNumberFormat, { prefix: '$ ', decimal: '.', thousand: ',' })
       app.use(plugin, defaultConfig(formKitConfig))
       AOS.init()

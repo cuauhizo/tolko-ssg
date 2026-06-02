@@ -1,10 +1,12 @@
 <script setup>
   import { ref } from 'vue'
   import axios from 'axios'
+  import { useGtm } from '@gtm-support/vue-gtm'
   import { reset } from '@formkit/vue'
   import { useI18n } from 'vue-i18n'
 
   const { t } = useI18n()
+  const gtm = useGtm()
 
   // --- ESTADO PARA LA UI ---
   const cargando = ref(false)
@@ -28,7 +30,16 @@
       const url = `${import.meta.env.VITE_API_BASE_URL}/contact`
       const { data } = await axios.post(url, formData)
 
-      exito.value = data.msg
+      if (gtm) {
+        gtm.trackEvent({
+          event: 'generate_lead', // Nombre del evento recomendado por GA4
+          category: 'Contacto',
+          action: 'Formulario de Contacto Enviado',
+          label: formData.servicio,
+          servicio_interesado: formData.servicio,
+        })
+      }
+      exito.value = t('section5.form.sendSuccess')
       reset('frmContacto')
 
       // Limpiar los v-model manualmente
@@ -41,7 +52,8 @@
       if (error.response && error.response.data && error.response.data.msg) {
         errorMsg.value = error.response.data.msg
       } else {
-        errorMsg.value = 'Error al enviar el formulario. Por favor intenta nuevamente.'
+        // errorMsg.value = 'Error al enviar el formulario. Por favor intenta nuevamente.'
+        errorMsg.value = t('section5.form.sendError')
       }
     } finally {
       cargando.value = false
@@ -151,7 +163,9 @@
         </template>
       </ClientOnly>
 
-      <p v-if="cargando" class="text-center mt-4 p-2 bg-yellow-100 text-yellow-700 rounded">Enviando....</p>
+      <p v-if="cargando" class="text-center mt-4 p-2 bg-yellow-100 text-yellow-700 rounded">
+        {{ $t('section5.form.sending') }}
+      </p>
       <p v-if="exito" class="text-center mt-4 p-2 bg-green-100 text-green-700 rounded">
         {{ exito }}
       </p>
