@@ -32,7 +32,16 @@
 
       if (gtm) {
         gtm.trackEvent({
-          event: 'generate_lead', // Nombre del evento recomendado por GA4
+          event: 'generate_lead',
+          category: 'Contacto',
+          action: 'Formulario de Contacto Enviado',
+          label: formData.servicio,
+          servicio_interesado: formData.servicio,
+        })
+      } else if (typeof window !== 'undefined' && window.dataLayer) {
+        // 4. Fallback de seguridad por si el plugin de Vue falla en ViteSSG
+        window.dataLayer.push({
+          event: 'generate_lead',
           category: 'Contacto',
           action: 'Formulario de Contacto Enviado',
           label: formData.servicio,

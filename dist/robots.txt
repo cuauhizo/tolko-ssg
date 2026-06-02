@@ -1,0 +1,16 @@
+# Archivo robots.txt para https://tolkogroup.com
+
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /test/
+Disallow: /drafts/
+Disallow: /nike/
+
+# Permitir acceso al resto del sitio
+Allow: /
+
+# Indicar sitemap para mejorar la indexación
+Sitemap: https://tolkogroup.com/sitemap.xml

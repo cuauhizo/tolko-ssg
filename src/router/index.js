@@ -3,7 +3,17 @@ import { createRouter, createWebHistory, createMemoryHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Root',
+    component: () => import('@/views/HomeView.vue'),
+  },
+  {
+    path: '/en',
+    name: 'HomeEN',
+    component: () => import('@/views/HomeView.vue'),
+  },
+  {
+    path: '/es',
+    name: 'HomeES',
     component: () => import('@/views/HomeView.vue'),
   },
   // Ruta comodín para 404

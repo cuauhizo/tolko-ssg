@@ -29,6 +29,22 @@ export const createApp = ViteSSG(
     app.use(router)
     app.use(i18n)
 
+    // Guard de navegación para interceptar el idioma desde la URL
+    router.beforeEach((to, from, next) => {
+      // Obtenemos el primer segmento de la ruta (ej: 'en' o 'es')
+      const segmentoIdioma = to.path.split('/')[1]
+
+      if (segmentoIdioma === 'es') {
+        i18n.global.locale.value = 'es'
+      } else if (segmentoIdioma === 'en') {
+        i18n.global.locale.value = 'en'
+      } else if (to.path === '/') {
+        // Si entra a la raíz pura '/', le asignamos el idioma por defecto
+        i18n.global.locale.value = 'en'
+      }
+      next()
+    })
+
     // Puedes mover la inicialización de AOS aquí, o en un componente de nivel superior como App.vue
     if (isClient) {
       app.use(
