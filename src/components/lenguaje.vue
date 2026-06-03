@@ -32,8 +32,8 @@
   const idioma = ref(locale.value)
 
   const flags = {
-    es: '/lenguaje/mexico.png',
-    en: '/lenguaje/united-states-of-america.png',
+    es: '/lenguaje/mexico.webp',
+    en: '/lenguaje/united-states-of-america.webp',
   }
 
   const languageTexts = {

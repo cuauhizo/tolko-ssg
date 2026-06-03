@@ -2,9 +2,11 @@
   import { ref, reactive, watch } from 'vue'
   import Modal from '@/components/modal.vue'
   import { useI18n } from 'vue-i18n'
+  import { useGtm } from '@gtm-support/vue-gtm'
 
   const { t, locale } = useI18n()
   const idioma = ref(locale)
+  const gtm = useGtm()
 
   const servicios = reactive([
     {
@@ -66,6 +68,18 @@
     setTimeout(() => {
       modal.animar = true
     }, 300)
+
+    if (gtm) {
+      gtm.trackEvent({
+        event: 'view_service',
+        servicio_visto: servicio.titulo,
+      })
+    } else if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'view_service',
+        servicio_visto: servicio.titulo,
+      })
+    }
   }
   const ocultarModal = () => {
     modal.animar = false
