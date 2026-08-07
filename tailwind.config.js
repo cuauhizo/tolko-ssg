@@ -17,6 +17,7 @@ export default {
       backgroundImage: {
         'close-menu': "url('../assets/img/icon-close.svg')",
         'open-menu': "url('../assets/img/icon-hamburger.svg')",
+        becario: "url('../assets/img/bg-creativeBasecamp.png')",
       },
     },
   },

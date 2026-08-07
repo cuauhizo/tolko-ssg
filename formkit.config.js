@@ -10,6 +10,9 @@ const config = {
         message: 'text-tolko-red text-sm',
         help: 'text-sm text-end',
       },
+      file: {
+        input: '$reset w-full focus:outline-none',
+      },
       submit: {
         input: '$reset py-3 text-base font-medium rounded text-white bg-tolko-red w-full hover:opacity-85 transition duration-300',
       },

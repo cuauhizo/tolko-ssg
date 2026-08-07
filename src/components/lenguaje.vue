@@ -53,12 +53,12 @@
     optionsActive.value = !optionsActive.value
   }
 
-  // 🌟 CORRECCIÓN PRINCIPAL: Unificamos el cambio visual, la URL y GTM aquí
+  // 🌟 CORRECCIÓN PRINCIPAL: Cambiamos el idioma en caliente sin tocar la URL
   const selectOption = selectedLocale => {
-    // 1. Cambiamos la URL (esto dispara el router.beforeEach de main.js)
-    router.push(`/${selectedLocale}`)
+    // 1. Actualizamos el idioma global de vue-i18n de forma reactiva
+    locale.value = selectedLocale
 
-    // 2. Medición para GTM y GA4
+    // 2. Medición para GTM y GA4 (Lo mantenemos intacto porque está excelente)
     if (gtm) {
       gtm.trackEvent({
         event: 'cambio_idioma',
@@ -72,7 +72,7 @@
       })
     }
 
-    // 3. Actualizamos la interfaz del componente
+    // 3. Actualizamos la interfaz del componente de la bandera
     idioma.value = selectedLocale
     selectedImg.value = flags[selectedLocale]
     optionsActive.value = false

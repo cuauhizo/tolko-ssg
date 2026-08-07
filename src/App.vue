@@ -1,5 +1,6 @@
 <script setup>
   import { ref, onMounted, onUnmounted } from 'vue'
+  import { useRouter } from 'vue-router'
   import Lenguaje from '@/components/lenguaje.vue'
   // import Responsive from '@/components/responsive.vue'
 
@@ -8,6 +9,7 @@
   const activeSection = ref(null)
   const isScrolled = ref(false)
   const sectionIds = ['section1', 'section2', 'section3', 'section4', 'section5', 'section6']
+  const router = useRouter()
 
   // Ejecuta el scroll al top sólo si window existe
   const scrollToTop = () => {
@@ -46,7 +48,15 @@
     if (typeof document === 'undefined') return
     const element = document.getElementById(`section${index}`)
     if (element) {
+      // Si el elemento está en la página actual, haz el scroll suave
       element.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      // Si no existe (estamos en /unete-al-equipo), redirige a la raíz con un hash
+      router.push({ path: '/' })
+      setTimeout(() => {
+        const newElement = document.getElementById(`section${index}`)
+        if (newElement) newElement.scrollIntoView({ behavior: 'smooth' })
+      }, 100) // Pequeño retraso para dar tiempo a que cargue el Home
     }
   }
 
@@ -94,11 +104,11 @@
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  @click.prevent="scrollToSection(3); cerrarMenu();">
+                <router-link
+                  to="/creative-basecamp"
+                  @click="cerrarMenu()">
                   {{ $t('menu.join_our_team') }}
-                </a>
+                </router-link>
               </li>
               <li>
                 <a
