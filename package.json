@@ -31,6 +31,7 @@
     "vite": "^6.3.5",
     "vite-plugin-image-optimizer": "^2.0.3",
     "vite-plugin-vue-devtools": "^8.2.1",
+    "vite-ssg-sitemap": "^0.10.0",
     "vitest": "^3.2.2"
   }
 }

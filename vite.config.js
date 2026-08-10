@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import generateSitemap from 'vite-ssg-sitemap'
 
 export default defineConfig({
   plugins: [
@@ -47,5 +48,23 @@ export default defineConfig({
   // ✅ Opcional pero recomendado para optimizar dependencias
   optimizeDeps: {
     include: ['@formkit/vue', '@formkit/i18n', '@formkit/themes', 'vue-i18n'],
+  },
+
+  ssgOptions: {
+    script: 'async',
+    formatting: 'minify',
+
+    // 3. MAGIA AQUÍ: Se ejecuta al terminar el build
+    onFinished() {
+      generateSitemap({
+        // Asegúrate de poner tu dominio en producción
+        hostname: 'https://tolkogroup.com',
+
+        // (Opcional) Si tienes rutas dinámicas como /blog/:id que vite-ssg no
+        // puede adivinar por sí solo, las puedes inyectar aquí.
+        // Para las estáticas como /contact o /careers, lo hace automático.
+        // dynamicRoutes: ['/blog/articulo-1', '/blog/articulo-2']
+      })
+    },
   },
 })

@@ -1,6 +1,7 @@
 <script setup>
-  import { ref, onMounted } from 'vue'
+  import { ref, onMounted, computed } from 'vue'
   import axios from 'axios'
+  import { useHead } from '@vueuse/head'
   import { useGtm } from '@gtm-support/vue-gtm'
   import { reset } from '@formkit/vue'
   import { useI18n } from 'vue-i18n'
@@ -8,6 +9,72 @@
 
   const { t } = useI18n()
   const gtm = useGtm()
+
+  // --- CONFIGURACIÓN DE SEO ---
+  useHead({
+    title: computed(() => t('careers.meta.title')),
+    meta: [
+      {
+        name: 'description',
+        content: computed(() => t('careers.meta.description')),
+      },
+      {
+        name: 'keywords',
+        content: computed(() => t('careers.meta.keywords')),
+      },
+      // Etiquetas Open Graph (Fundamentales si compartes la vacante en LinkedIn/WhatsApp)
+      {
+        property: 'og:title',
+        content: computed(() => t('careers.meta.title')),
+      },
+      {
+        property: 'og:description',
+        content: computed(() => t('careers.meta.description')),
+      },
+      {
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        property: 'og:image',
+        content: 'https://tolkogroup.com/assets/img/bg-creativeBasecamp.png', // Ajusta a la ruta real cuando la subas
+      },
+      {
+        property: 'og:image:alt',
+        content: 'Creative Basecamp - Programa de Becarios Tolko',
+      },
+    ],
+    // NUEVO: Script de Datos Estructurados
+    script: [
+      {
+        type: 'application/ld+json',
+        children: computed(() =>
+          JSON.stringify({
+            '@context': 'https://schema.org/',
+            '@type': 'JobPosting',
+            title: 'Becario de Comunicación / Marketing - Creative Basecamp',
+            description: 'Programa de Becarios Tolko: Aprende haciendo y creando para marcas reales. 20 horas a la semana, presenciales en Polanco.',
+            hiringOrganization: {
+              '@type': 'Organization',
+              name: 'Tolko Group',
+              sameAs: 'https://tolkogroup.com',
+              logo: 'https://tolkogroup.com/assets/img/logo-tolko.svg',
+            },
+            employmentType: 'INTERN',
+            jobLocation: {
+              '@type': 'Place',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Polanco',
+                addressRegion: 'CDMX',
+                addressCountry: 'MX',
+              },
+            },
+          }),
+        ),
+      },
+    ],
+  })
 
   // --- ESTADO PARA LA UI ---
   const showScrollTopButton = ref(false)
@@ -112,7 +179,7 @@
       <div class="w-full md:w-1/2 text-white pr-0 md:pr-12 flex flex-col justify-center">
         <!-- Título principal -->
         <div class="mb-8 text-center">
-          <h2 class="font-extrabold text-3xl md:text-4xl tracking-tight leading-none mb-2 sr-only">Creative Basecamp: Programa de Becarios Tolko</h2>
+          <h1 class="font-extrabold text-3xl md:text-4xl tracking-tight leading-none mb-2 sr-only">Creative Basecamp: Programa de Becarios Tolko</h1>
           <img :src="becarios" alt="Creative Basecamp" class="inline-flex w-64 md:w-3/4 mx-auto md:mx-0 mb-4" />
           <p class="text-lg font-light">
             {{ $t('careers.program_subtitle') }}
@@ -121,7 +188,7 @@
         </div>
 
         <!-- Titular secundario -->
-        <h3 class="text-xl md:text-2xl font-bold mb-10 leading-snug text-center md:text-left" v-html="$t('careers.learn_doing')"></h3>
+        <h2 class="text-xl md:text-2xl font-bold mb-10 leading-snug text-center md:text-left" v-html="$t('careers.learn_doing')"></h2>
 
         <!-- Etiqueta "Buscamos:" (Estilo Píldora) -->
         <div class="text-center md:text-left mb-6">

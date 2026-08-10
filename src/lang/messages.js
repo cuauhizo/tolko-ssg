@@ -129,6 +129,11 @@ export const messages = {
       textBtn: 'Go to home',
     },
     careers: {
+      meta: {
+        title: 'Join our team | Tolko Group',
+        description: 'We are looking for talent. Discover our Creative Basecamp program, learn by doing for real brands, and join our communications agency.',
+        keywords: 'careers, job openings, internships, interns, communications agency, creative basecamp, Tolko Group',
+      },
       title: 'Join our team!',
       program_subtitle: 'Internship program',
       tolko_interns: 'Tolko Interns',
@@ -312,6 +317,11 @@ export const messages = {
       textBtn: 'Ir a inicio',
     },
     careers: {
+      meta: {
+        title: 'Únete al equipo | Tolko Group',
+        description: 'Buscamos talento. Conoce nuestro programa Creative Basecamp, aprende haciendo para marcas reales y forma parte de nuestra agencia de comunicaciones en CDMX.',
+        keywords: 'bolsa de trabajo, vacantes, prácticas, becarios, agencia de comunicación, creative basecamp, Tolko Group, CDMX',
+      },
       title: '¡Únete al equipo!',
       program_subtitle: 'Programa de',
       tolko_interns: 'Becarios Tolko',
