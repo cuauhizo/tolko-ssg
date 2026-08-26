@@ -1,18 +1,41 @@
 <script setup>
   import { ref, onMounted, computed } from 'vue'
   import axios from 'axios'
+  import { useRoute } from 'vue-router'
   import { useHead } from '@vueuse/head'
   import { useGtm } from '@gtm-support/vue-gtm'
   import { reset } from '@formkit/vue'
   import { useI18n } from 'vue-i18n'
   import becarios from '@/assets/img/CreativeBasecamp.svg'
 
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
+  const route = useRoute()
   const gtm = useGtm()
+
+  // Computed para construir la URL base según el idioma activo
+  const currentUrl = computed(() => {
+    // Si es el idioma por defecto (en), podemos dejar la raíz o /en. Lo ideal es mantener consistencia.
+    return `https://tolkogroup.com/${locale.value}`
+  })
+
+  // Construye la URL exacta en la que estamos navegando
+  const urlCanonica = computed(() => {
+    // Asegúrate de que coincida con el 'hostname' que pusiste en vite.config.js
+    const base = 'https://tolkogroup.com'
+
+    // route.path te da la ruta exacta (ej. /unete-al-equipo)
+    // Reemplazamos posibles diagonales finales para mantener la consistencia
+    const path = route.path.replace(/\/$/, '')
+
+    return `${base}${path}`
+  })
 
   // --- CONFIGURACIÓN DE SEO ---
   useHead({
     title: computed(() => t('careers.meta.title')),
+    htmlAttrs: {
+      lang: () => locale.value,
+    },
     meta: [
       {
         name: 'description',
@@ -37,11 +60,18 @@
       },
       {
         property: 'og:image',
-        content: 'https://tolkogroup.com/assets/img/bg-creativeBasecamp.png', // Ajusta a la ruta real cuando la subas
+        content: 'https://tolkogroup.com/img/bg-creativeBasecamp.png', // Ajusta a la ruta real cuando la subas
       },
+      { property: 'og:url', content: currentUrl }, // 🌟 DINÁMICO: Cambia según el idioma
       {
         property: 'og:image:alt',
         content: 'Creative Basecamp - Programa de Becarios Tolko',
+      },
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: urlCanonica,
       },
     ],
     // NUEVO: Script de Datos Estructurados
@@ -58,7 +88,7 @@
               '@type': 'Organization',
               name: 'Tolko Group',
               sameAs: 'https://tolkogroup.com',
-              logo: 'https://tolkogroup.com/assets/img/logo-tolko.svg',
+              logo: 'https://tolkogroup.com/logo-tolko.svg',
             },
             employmentType: 'INTERN',
             jobLocation: {
