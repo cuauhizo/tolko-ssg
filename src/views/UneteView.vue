@@ -320,7 +320,7 @@
 
               <!-- Botón -->
               <div class="md:col-span-2">
-                <FormKit type="submit">
+                <FormKit type="submit" :disabled="cargando">
                   {{ $t('careers.form.send') }}
                 </FormKit>
               </div>
