@@ -7,11 +7,6 @@ const routes = [
     component: () => import('@/views/HomeView.vue'),
   },
   {
-    path: '/en',
-    name: 'HomeEN',
-    component: () => import('@/views/HomeView.vue'),
-  },
-  {
     path: '/es',
     name: 'HomeES',
     component: () => import('@/views/HomeView.vue'),

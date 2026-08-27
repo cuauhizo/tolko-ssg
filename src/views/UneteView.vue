@@ -12,21 +12,11 @@
   const route = useRoute()
   const gtm = useGtm()
 
-  // Computed para construir la URL base según el idioma activo
-  const currentUrl = computed(() => {
-    // Si es el idioma por defecto (en), podemos dejar la raíz o /en. Lo ideal es mantener consistencia.
-    return `https://tolkogroup.com/${locale.value}`
-  })
 
   // Construye la URL exacta en la que estamos navegando
   const urlCanonica = computed(() => {
-    // Asegúrate de que coincida con el 'hostname' que pusiste en vite.config.js
     const base = 'https://tolkogroup.com'
-
-    // route.path te da la ruta exacta (ej. /unete-al-equipo)
-    // Reemplazamos posibles diagonales finales para mantener la consistencia
     const path = route.path.replace(/\/$/, '')
-
     return `${base}${path}`
   })
 
@@ -62,7 +52,7 @@
         property: 'og:image',
         content: 'https://tolkogroup.com/img/bg-creativeBasecamp.png', // Ajusta a la ruta real cuando la subas
       },
-      { property: 'og:url', content: currentUrl }, // 🌟 DINÁMICO: Cambia según el idioma
+      { property: 'og:url', content: urlCanonica }, // 🌟 DINÁMICO: Cambia según el idioma
       {
         property: 'og:image:alt',
         content: 'Creative Basecamp - Programa de Becarios Tolko',

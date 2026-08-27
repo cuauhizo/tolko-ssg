@@ -20,13 +20,14 @@
 
 <script setup>
   import { ref, watch, computed } from 'vue'
-  import { useRouter } from 'vue-router'
+  import { useRouter, useRoute } from 'vue-router'
   import { useI18n } from 'vue-i18n'
   import { useGtm } from '@gtm-support/vue-gtm' // 🌟 NUEVO: Importamos GTM
 
   const router = useRouter()
+  const route = useRoute()
   const { t, availableLocales, locale } = useI18n()
-  const gtm = useGtm() // 🌟 NUEVO: Inicializamos GTM
+  const gtm = useGtm()
 
   // Usamos el locale global para que siempre concuerde con la URL
   const idioma = ref(locale.value)
@@ -54,9 +55,9 @@
   }
 
   // 🌟 CORRECCIÓN PRINCIPAL: Cambiamos el idioma en caliente sin tocar la URL
-  const selectOption = selectedLocale => {
+  const selectOption = async selectedLocale => {
     // 1. Actualizamos el idioma global de vue-i18n de forma reactiva
-    locale.value = selectedLocale
+    // locale.value = selectedLocale
 
     // 2. Medición para GTM y GA4 (Lo mantenemos intacto porque está excelente)
     if (gtm) {
@@ -70,6 +71,17 @@
         event: 'cambio_idioma',
         idioma_seleccionado: selectedLocale,
       })
+    }
+
+    // 2. Cambiamos la URL físicamente según la página
+    if (route.path === '/' || route.path === '/es') {
+      // Si estamos en el Home, navegamos a la raíz (EN) o a /es (ES)
+      const targetPath = selectedLocale === 'en' ? '/' : '/es'
+      await router.push(targetPath)
+    } else {
+      // Si estás en otra página (ej. /creative-basecamp) y cambias el idioma, 
+      // actualizamos el i18n directamente, ya que por ahora comparten URL.
+      locale.value = selectedLocale
     }
 
     // 3. Actualizamos la interfaz del componente de la bandera

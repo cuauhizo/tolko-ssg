@@ -11,10 +11,11 @@
 
   const { t, locale } = useI18n()
 
-  // Computed para construir la URL base según el idioma activo
+  // Computed corregido: Si es inglés, usa la raíz. Si es español, usa /es
   const currentUrl = computed(() => {
-    // Si es el idioma por defecto (en), podemos dejar la raíz o /en. Lo ideal es mantener consistencia.
-    return `https://tolkogroup.com/${locale.value}`
+    return locale.value === 'en' 
+      ? 'https://tolkogroup.com/' 
+      : 'https://tolkogroup.com/es'
   })
 
   useHead({
@@ -29,7 +30,7 @@
       { property: 'og:title', content: computed(() => t('meta.title')) },
       { property: 'og:description', content: computed(() => t('meta.description')) },
       { property: 'og:image', content: 'https://tolkogroup.com/logo-tolko.svg' },
-      { property: 'og:url', content: currentUrl }, // 🌟 DINÁMICO: Cambia según el idioma
+      { property: 'og:url', content: currentUrl },
       { property: 'og:type', content: 'website' },
 
       // Twitter Card
@@ -44,9 +45,9 @@
       { rel: 'canonical', href: currentUrl }, // Canonical corregido y dinámico
 
       // Etiquetas hreflang indispensables para SEO internacional
-      { rel: 'alternate', hreflang: 'en', href: 'https://tolkogroup.com/en' },
+      { rel: 'alternate', hreflang: 'en', href: 'https://tolkogroup.com/' },
       { rel: 'alternate', hreflang: 'es', href: 'https://tolkogroup.com/es' },
-      { rel: 'alternate', hreflang: 'x-default', href: 'https://tolkogroup.com/' }, // URL de caída por defecto
+      { rel: 'alternate', hreflang: 'x-default', href: 'https://tolkogroup.com/' },
     ],
     script: [
       {
@@ -56,7 +57,7 @@
           '@type': 'Organization',
           name: 'Tolko Group',
           alternateName: 'Tolko',
-          url: 'https://tolkogroup.com/',
+          url: 'https://tolkogroup.com',
           logo: 'https://tolkogroup.com/logo-tolko.svg',
           description: t('meta.description'),
           contactPoint: [
